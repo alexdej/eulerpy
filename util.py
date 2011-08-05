@@ -51,3 +51,6 @@ def factors(n):
       while n % p == 0:
         n = n / p
   return fs
+
+def nth(n, iterable):
+  return itertools.islice(iterable, n, None).next()
