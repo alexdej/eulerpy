@@ -51,10 +51,8 @@ def test():
   assert factor(2520)[0] == 3
   print 'All tests pass.'
 
-if __name__=="__main__":
-  test()
-  #print smallest_divisible(20)
-  print smallest_divisible_fast(20)
+test()
+print smallest_divisible_fast(20)
   
   
   

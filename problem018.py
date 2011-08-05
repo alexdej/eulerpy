@@ -1,5 +1,5 @@
-# http://www.yodle.com/careers/job-details/senior-software-engineer-new-york-ny/
 def solve(data):
+  # using the same solution as for problem 67
   # working upwards from the bottom of the triangle (actually the second row
   # from the bottom), compute the maximum sum from that position and store it 
   # in place
@@ -20,6 +20,6 @@ def test():
 if __name__=="__main__":
   test()
   
-  f = open('problem018_triangle.txt')
+  f = open('data/problem018.txt')
   print solve([[int(s) for s in l.split()] for l in f.readlines()])
   f.close()
