@@ -104,7 +104,7 @@ def test_solve(grid, solution):
 if __name__ == '__main__':
   test()
   
-  f = open('problem096_sudoku.txt')
+  f = open('data/problem096.txt')
   grids = []
   grid = ''
   for l in f.readlines():

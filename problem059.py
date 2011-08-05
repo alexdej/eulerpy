@@ -31,11 +31,11 @@ if __name__=="__main__":
   
   test()
 
-  f = open('problem059_cipher.txt')
+  f = open('data/problem059.txt')
   cipher = map(int, f.read().split(','))
   f.close()
   
-  print englishness(decipher(cipher, map(ord, 'god')))
+  #print englishness(decipher(cipher, map(ord, 'god')))
   
   candidates = []
   for key in all_keys():

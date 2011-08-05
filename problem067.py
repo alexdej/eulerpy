@@ -20,6 +20,6 @@ def test():
 if __name__=="__main__":
   test()
   
-  f = open('problem67_triangle.txt')
+  f = open('data/problem67.txt')
   print solve([[int(s) for s in l.split()] for l in f.readlines()])
   f.close()
