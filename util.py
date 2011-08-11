@@ -2,6 +2,9 @@
 
 import itertools
 
+def factorial(n):
+  return product(i for i in xrange(1, n + 1))
+
 def fibonacci():
   yield 1
   yield 2
@@ -12,6 +15,20 @@ def fibonacci():
     p1 = p2
     p2 = q
     yield q
+
+def fibonacci_with_index():
+  p1 = 1
+  p2 = 1
+  yield (1,p1)
+  yield (2,p2)
+  i = 2
+  for n in itertools.count(1):
+    q = p1 + p2
+    p1 = p2
+    p2 = q
+    i = i + 1
+    yield (i, q)
+  
     
 def product(A):
   p = 1
