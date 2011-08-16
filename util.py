@@ -1,6 +1,6 @@
 # misc helpers
 
-import itertools
+import itertools, math
 
 def factorial(n):
   return product(i for i in xrange(1, n + 1))
@@ -49,3 +49,7 @@ def is_palindrome(s):
 
 def nth(n, iterable):
   return itertools.islice(iterable, n, None).next()
+  
+def divisors(n):
+  return [1] + sum(([d,n/d] for d in xrange(2, int(math.sqrt(n)) + 1) if not n % d), [])
+
