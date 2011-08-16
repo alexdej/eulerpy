@@ -1,6 +1,6 @@
 # helper functions dealing with prime numbers and factorization
 
-import itertools
+import itertools, math
 
 # erat2 from http://onlamp.com/pub/a/python/excerpt/pythonckbk_chap1/index1.html?page=2
 def erat2( ):
@@ -19,8 +19,9 @@ def erat2( ):
 
 def factors(n):
   fs = []
+  m = math.sqrt(n)
   for p in erat2():
-    if p > n:
+    if p > m:
       break
     elif n % p == 0:
       fs.append(p)
