@@ -28,7 +28,9 @@ def fibonacci_with_index():
     p2 = q
     i = i + 1
     yield (i, q)
-  
+
+def n_choose_k(n, k):
+  return factorial(n) / (factorial(k) * factorial(n-k))
     
 def product(A):
   p = 1

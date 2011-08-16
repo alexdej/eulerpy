@@ -17,15 +17,26 @@ def erat2( ):
                 x += p
             D[x] = p
 
-def factors(n):
+def factors(n, ps=None):
   fs = []
+  if not ps:
+    ps = erat2()
+  for p in ps:
+    if p > n:
+      break
+    while not n % p:
+      fs.append(p)
+      n = n / p
+  return fs
+
+def is_prime(n):
   m = math.sqrt(n)
   for p in erat2():
     if p > m:
       break
     elif n % p == 0:
-      fs.append(p)
-      while n % p == 0:
-        n = n / p
-  return fs
+      return False
+  return True
 
+def primes(maximum):
+  return itertools.takewhile(lambda x: x <= maximum, erat2())
